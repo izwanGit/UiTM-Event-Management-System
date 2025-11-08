@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<!-- Define a servlet that handles JSP files -->
+	<servlet>
+		<servlet-name>jsp</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map the JSP servlet to handle requests to *.jsp -->
+	<servlet-mapping>
+		<servlet-name>jsp</servlet-name>
+		<url-pattern>*.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>DeleteEventServlet</servlet-name>
+	    <servlet-class>controller.DeleteEventServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DeleteEventServlet</servlet-name>
+	    <url-pattern>/views/organizer/DeleteEventServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>DeleteEventActionServlet</servlet-name>
+	    <servlet-class>controller.DeleteEventActionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DeleteEventActionServlet</servlet-name>
+	    <url-pattern>/views/organizer/DeleteEventActionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>  <!-- Optional but useful for initialization -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>BrowseEventServlet</servlet-name>
+        <servlet-class>controller.BrowseEventServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BrowseEventServlet</servlet-name>
+        <url-pattern>/BrowseEventServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+	    <servlet-name>RegisterEventServlet</servlet-name>
+	    <servlet-class>controller.RegisterEventServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>  <!-- Optional but useful for initialization -->
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>RegisterEventServlet</servlet-name>
+	    <url-pattern>/RegisterEventServlet</url-pattern>
+	</servlet-mapping>
+    
+	<servlet>
+		<servlet-name>CancelRegistrationServlet</servlet-name>
+		<servlet-class>controller.CancelRegistrationServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CancelRegistrationServlet</servlet-name>
+		<url-pattern>/CancelRegistrationServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CancelRegistrationActionServlet</servlet-name>
+		<servlet-class>controller.CancelRegistrationActionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CancelRegistrationActionServlet</servlet-name>
+		<url-pattern>/CancelRegistrationActionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TrackRegisteredServlet</servlet-name>
+		<servlet-class>controller.TrackRegisteredServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TrackRegisteredServlet</servlet-name>
+		<url-pattern>/TrackRegisteredServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EventFeedbackServlet</servlet-name>
+		<servlet-class>controller.EventFeedbackServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EventFeedbackServlet</servlet-name>
+		<url-pattern>/EventFeedbackServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EventFeedbackFilterServlet</servlet-name>
+		<servlet-class>controller.EventFeedbackFilterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EventFeedbackFilterServlet</servlet-name>
+		<url-pattern>/EventFeedbackFilterServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EventFeedbackActionServlet</servlet-name>
+		<servlet-class>controller.EventFeedbackActionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EventFeedbackActionServlet</servlet-name>
+		<url-pattern>/EventFeedbackActionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateEventServlet</servlet-name>
+		<servlet-class>controller.CreateEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateEventServlet</servlet-name>
+		<url-pattern>/views/organizer/CreateEventServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditEventServlet</servlet-name>
+		<servlet-class>controller.EditEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditEventServlet</servlet-name>
+		<url-pattern>/views/organizer/EditEventServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditPostCaptionServlet</servlet-name>
+		<servlet-class>controller.EditPostCaptionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditPostCaptionServlet</servlet-name>
+		<url-pattern>/views/organizer/EditPostCaptionServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewFeedbackServlet</servlet-name>
+		<servlet-class>controller.ViewFeedbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewFeedbackServlet</servlet-name>
+		<url-pattern>/views/organizer/ViewFeedbackServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ViewPaymentServlet</servlet-name>
+		<servlet-class>controller.ViewPaymentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPaymentServlet</servlet-name>
+		<url-pattern>/views/organizer/ViewPaymentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BrowseEventFilterServlet</servlet-name>
+		<servlet-class>controller.BrowseEventFilterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BrowseEventFilterServlet</servlet-name>
+		<url-pattern>/BrowseEventFilterServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Optionally, define a welcome file -->
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

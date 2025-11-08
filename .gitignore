@@ -1,0 +1,12 @@
+/build/
+# Ignore the environment file
+.env
+
+# Ignore Eclipse files
+.project
+.classpath
+.settings/
+
+# Ignore compiled Java files
+target/
+*.class
